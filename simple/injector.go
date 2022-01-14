@@ -5,10 +5,9 @@ package simple
 
 import "github.com/google/wire"
 
-func InitializedService() *SimpleService  {
+func InitializedService() *SimpleService {
 	wire.Build(
-		NewSimpleRepository, NewSimpleService
+		NewSimpleRepository, NewSimpleService,
 	)
 	return nil
 }
-
